@@ -1,8 +1,12 @@
 from django.db import models
 
-class login(Models.model):
+class Registration(models.Model):
+    First_name = models.CharField(max_length=50)
+    Second_name = models.CharField(max_length=50)
+    Email = models.EmailField(unique=True)
+
+
+
+class login(models.Model):
     Username = models.CharField
     Password = models.CharField
-
-class signup(Models.model):
-    Full_name = models.CharField
