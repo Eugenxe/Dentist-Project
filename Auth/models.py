@@ -5,8 +5,12 @@ class Registration(models.Model):
     Second_name = models.CharField(max_length=50)
     Email = models.EmailField(unique=True)
 
+#Include Id number
 
 
-class login(models.Model):
-    Username = models.CharField
-    Password = models.CharField
+class Appointment(models.Model):
+    patient = models.ForeignKey(Registration, on_delete=models.CASCADE)
+    date = models.DateField(default='2026-03-20')
+    
+    
+
